@@ -1,0 +1,149 @@
+008     PSP_DATA
+015-016 CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B-01C CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @TRIS_C
+021     main.string_hour
+022     main.string_min
+023     main.string_sec
+024     main.hour
+025     main.min
+026     main.sec
+027     main.last_sec
+028-029 main.fval
+02A-02B main.cval
+02C     init_temp.address
+02C     lcd_init.i
+02C     read_full_temp.address
+02C     rtc_set_datetime.hour
+02C     @PRINTF_U_352.@PRINTF_U_352.P1
+02C     main.@SCRATCH
+02D-02E @PRINTF_LD_352.@PRINTF_LD_352.P1
+02D     temp_config.data
+02D     rtc_set_datetime.min
+02D     @PRINTF_U_352.@PRINTF_U_352.P1
+02D     read_full_temp.datah
+02D     lcd_init.@SCRATCH
+02D     main.@SCRATCH
+02E     write_rtc_byte.data_byte
+02E     @DIV88.@DIV88.P1
+02E     read_full_temp.datal
+02E     temp_config.address
+02E     main.@SCRATCH
+02F     @DIV88.@DIV88.P1
+02F     write_rtc_byte.number_of_bits
+02F     read_rtc_byte.number_of_bits
+02F-030 read_full_temp.data
+02F-030 @DIV1616.@DIV1616.P1
+02F     @PRINTF_LD_352.@SCRATCH
+030     read_rtc_byte.i
+030     write_rtc_byte.i
+030     @DIV88.@SCRATCH
+030     @PRINTF_LD_352.@SCRATCH
+031     read_rtc_byte.data
+031-032 @DIV1616.@DIV1616.P1
+031     @I2C_READ_1_48_49.@I2C_READ_1_48_49.P2
+031     read_full_temp.@SCRATCH
+031     write_rtc_byte.@SCRATCH
+031     @PRINTF_LD_352.@SCRATCH
+032     @I2C_WRITE_1_48_49.@I2C_WRITE_1_48_49.P1
+032     @I2C_READ_1_48_49.@SCRATCH
+032     read_full_temp.@SCRATCH
+032     @PRINTF_LD_352.@SCRATCH
+033-034 @MUL1616.@MUL1616.P1
+033     @I2C_READ_1_48_49.@SCRATCH
+033     read_full_temp.@SCRATCH
+033     @DIV1616.@SCRATCH
+033     @PRINTF_LD_352.@SCRATCH
+034     read_full_temp.@SCRATCH
+034     @PRINTF_LD_352.@SCRATCH
+035-036 @DIVS1616.@DIVS1616.P1
+035     lcd_putc.c
+035-036 @MUL1616.@MUL1616.P1
+036     lcd_gotoxy.x
+036     @delay_ms1.@delay_ms1.P1
+037-038 @DIVS1616.@DIVS1616.P1
+037     lcd_gotoxy.y
+037     @MUL1616.@SCRATCH
+038     lcd_gotoxy.address
+039     @DIVS1616.@SCRATCH
+039     lcd_gotoxy.@SCRATCH
+03A     lcd_send_byte.address
+03A     @DIVS1616.@SCRATCH
+03B     lcd_send_byte.n
+03C     lcd_read_byte.low
+03C     lcd_send_byte.@SCRATCH
+03D     lcd_read_byte.high
+03D     lcd_send_nibble.nibble
+03E.2   lcd_read_nibble.retval_2
+03E.1   lcd_read_nibble.retval_1
+03E.0   lcd_read_nibble.retval_0
+03E.3   lcd_read_nibble.retval_3
+03E     lcd_read_nibble.retval
+03E     lcd_read_byte.@SCRATCH
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B     @SCRATCH
+09C.6   C1OUT
+09C.7   C2OUT
+
+0159  @delay_ms1
+02E5  @I2C_READ_1_48_49
+0220  @I2C_WRITE_1_48_49
+02AC  temp_config
+026B  init_temp
+037F  read_full_temp
+032B  @MUL1616
+0340  @DIVS1616
+004A  rtc_init
+0053  write_rtc_byte
+0092  read_rtc_byte
+0073  rtc_set_datetime
+04D5  rtc_get_time
+0004  @const70
+00DE  lcd_send_nibble
+00AD  lcd_read_nibble
+0116  lcd_read_byte
+0110  lcd_send_byte
+01EC  lcd_init
+0187  lcd_gotoxy
+016C  lcd_putc
+04BC  main
+01A5  @DIV88
+01BA  @PRINTF_U_352
+042C  @DIV1616
+000C  @const10253
+0452  @PRINTF_LD_352
+001C  @const10269
+002B  @const10276
+003B  @const10280
+04BC  @cinit
+
+Project Files:
+    e:\interfaceing_p\qsaim.c
+    e:\interfaceing_p\the_file.c
+    C:\Program Files\PICC\devices\16F877A.h
+    e:\interfaceing_p\tempchip.c
+    e:\interfaceing_p\timechip.C
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   8
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: 1,8,16
+
+Output Files:
+    Errors:      e:\interfaceing_p\qsaim.err
+    INHX8:       e:\interfaceing_p\qsaim.HEX
+    Symbols:     e:\interfaceing_p\qsaim.SYM
+    List:        e:\interfaceing_p\qsaim.LST
+    Debug/eCOD:  e:\interfaceing_p\qsaim.cod
+    Call Tree:   e:\interfaceing_p\qsaim.tre
+    Statistics:  e:\interfaceing_p\qsaim.sta

@@ -1,0 +1,55 @@
+#include<the_file.c>
+void main()
+   {
+   char string_hour;
+   char string_min;
+   char string_sec;
+   int hour, min, sec,last_sec;
+   unsigned long fval,cval; 
+      //byte sec2;
+      rtc_init ();
+      rtc_set_datetime (hour, min );
+      while(1)
+
+      {
+
+      rtc_get_time(hour, min, sec);
+      printf(lcd_putc,"\n%02u:%02u:%02u\n", hour, min, sec );
+
+    if(input(Pin_A4))
+          {
+       lcd_init();
+               init_temp(0x90);
+                  fval = read_full_temp (0x90);
+                  fval  /= 100;
+                  printf(lcd_putc,"\fIN.F%3.2ld",fval );
+                  cval=5*(fval -32)/9;
+                  printf(lcd_putc,"in.c%3.2ld",cval);
+                  output_high(pin_e1),output_low(Pin_a1);
+               }
+           else
+           {
+                   lcd_init();
+                init_temp(0x92);
+               fval  = read_full_temp (0x92);
+                fval  /= 100;
+                printf(lcd_putc,"\fot.f%3.2ld",fval );
+                 cval =5*(fval -32)/9;
+                  printf(lcd_putc,"ot.c%3.2ld",fval );
+               output_high(pin_a1),output_low(Pin_e1);
+              }
+
+              if(fval  <=80 )
+                  output_low(pin_A5),output_low(pin_b5);
+                  else
+                  output_high(pin_a5),output_high(Pin_b5);
+
+           if (fval <=75)
+            output_high(pin_a2),output_low(pin_a3);
+else
+output_high(pin_a3),output_low(pin_a2);
+
+
+   }
+
+   }

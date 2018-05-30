@@ -1,0 +1,32 @@
+[PROJECT]
+Target=qsaim.HEX
+Development_Mode=2
+Processor=0x877A
+ToolSuite=CCS
+
+[Directories]
+Include=
+Library=
+LinkerScript=
+
+[Target Data]
+FileList=qsaim.c;
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+
+[qsaim.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=C:\DOCUME~1\saiy0002\Desktop\project2\NEWFOL~1\qsaim.c
+
+[Windows]
+0=0000 C:\DOCUME~1\saiy0002\Desktop\project2\NEWFOL~1\qsaim.c 0 0 796 451 3 0
+

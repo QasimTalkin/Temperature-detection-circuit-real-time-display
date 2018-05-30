@@ -1,0 +1,54 @@
+
+ROM used: 1566 (76%)
+          482 (24%) including unused fragments
+
+          2 Average locations per line
+          10 Average locations per statement
+
+RAM used: 20 (11%) at main() level
+          36 (21%) worst case
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   56    31  20  e:\interfaceing_p\qsaim.c
+  244    68  36  e:\interfaceing_p\the_file.c
+  274     0   0  C:\Program Files\PICC\devices\16F877A.h
+   78    25  10  e:\interfaceing_p\tempchip.c
+   97    32  11  e:\interfaceing_p\timechip.C
+----- -----
+ 1498   312 Total
+
+Page ROM  %  RAM  Functions:
+---- --- --- ---  ----------
+0     19   1   1  @delay_ms1
+0     70   4   3  @I2C_READ_1_48_49
+0     75   5   1  @I2C_WRITE_1_48_49
+0    122   8   1  init_temp
+0    173  11   9  read_full_temp
+0     21   1   5  @MUL1616
+0     63   4   6  @DIVS1616
+0      9   1   0  rtc_init
+0     32   2   4  write_rtc_byte
+0     27   2   3  read_rtc_byte
+0     31   2   2  rtc_set_datetime
+0      8   1   0  @const70
+0     50   3   1  lcd_send_nibble
+0     49   3   1  lcd_read_nibble
+0     73   5   3  lcd_send_byte
+0     52   3   2  lcd_init
+0     57   4   1  lcd_putc
+0    354  23  14  main
+0     21   1   3  @DIV88
+0     50   3   2  @PRINTF_U_352
+0     38   2   5  @DIV1616
+0     16   1   0  @const10253
+0    106   7   8  @PRINTF_LD_352
+0     15   1   0  @const10269
+0     16   1   0  @const10276
+0     15   1   0  @const10280
+
+ Segment   Used  Free
+---------  ----  ----
+00000-00003     4  0
+00004-007FF  1562  482
+
