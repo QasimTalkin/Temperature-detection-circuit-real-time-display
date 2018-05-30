@@ -1,0 +1,2 @@
+# Temperature-detection-circuit-real-time-display
+Using PIC microcontroller to an assortment of sensors, output devices and electronic components to demonstrate working of Temperature Sensors, EEPROM Programming, Analog to Digital Conversion, Clocking Data, Interfacing Displays, Real-Time Interfacing  and Programming the PIC using C. Different methods of circuit analysis and troubleshooting skills are examined through experimentation with the PIC and its associated components.
